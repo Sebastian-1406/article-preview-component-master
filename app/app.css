@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --plomo : hsl(217, 19%, 35%);
+    --gris : hsl(214, 17%, 51%);
+    --gris-claro : hsl(212, 23%, 69%);
+    --blanco : hsl(210, 46%, 95%);
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Manrope', sans-serif;
+    background: var(--blanco);
+}
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px #0002;
+}
+.contenedor-imagen{
+    width: 270px;
+    background-image: url("../images/drawers.jpg");
+    background-size: cover;
+    background-position: left;
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+.contenedor-texto{
+    width: 440px;
+    padding: 25px 40px;
+    background: #fff;
+    border-radius: 0px 10px 10px 0;
+    position: relative;
+}
+.contenedor-texto .titulo{
+    color: var(--plomo);
+    font-weight: 700;
+}
+.contenedor-texto .parrafo{
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 10px;
+    color: var(--plomo);
+    font-weight: 500;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    position: relative;
+}
+.icon{
+    position: absolute;
+    right: 0px;
+    padding: 7px;
+    background: var(--blanco);
+    color: var(--gris);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: color, background .5s;
+}
+
+.negro{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--plomo);
+}
+.gris{
+    font-size: 13px;
+    color: var(--gris-claro);
+}
+
+
+.card-imagen{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+
+/* Compartir */
+
+.compartir{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--plomo);
+    border-radius: 10px;
+    padding: 15px;
+    gap: 20px;
+    position: absolute;
+    bottom: 82px;
+    right: -70px;
+    box-shadow: 0px 5px 8px #0003;
+    display: none;
+}
+.triangulo{
+    width: 30px;
+    height: 15px;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background: var(--plomo);
+    position: absolute;
+    bottom: -15px;
+
+}
+.compartir .texto{
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 3px;
+    color: var(--gris);
+    font-size: 14px;
+}
+
+.compartir .fab{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity .5s;
+}
+.compartir .fab:hover{
+    opacity: .5;
+}
+.active .compartir {
+    display: inline-flex;
+}
+.active .icon{
+    background: var(--plomo);
+    color: #fff;
+}
+
+.active .fa-share{
+    box-shadow: 0px 0px 7px #0003;
+}
